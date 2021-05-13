@@ -5,10 +5,6 @@
     <link>https://vvasuki.github.io/kannaDa/gIte/</link>
     <description>Recent content in &#43;ಗೀತೆ on ಕನ್ನಡದಲ್ಲಿ ವಿಶ್ವಾಸ-ಟಿಪ್ಪಣಿಗಳು</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://vvasuki.github.io/kannaDa/gIte/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://vvasuki.github.io/kannaDa/gIte/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
