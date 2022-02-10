@@ -132,7 +132,7 @@
 
 
     
-<header class="p-1 bg-yellow">
+<header class="p-1 bg-yellow noPrint">
     <nav role="navigation">
       <div id="div_top_bar" class="row">
         <div class="col-md-3 justify-content-start">
@@ -142,7 +142,7 @@
         </div>
         <div id="div_top_bar_right" class="col-md-auto d-flex justify-content-center">
           ✍
-          <select name="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
+          <select id="transliterationDropdown" size="1" onchange="module_transliteration.updateTransliteration()">
             <optgroup label="🌍">
               <option value="iso">āISO</option>
               <option value="cyrillic">пу</option>
@@ -175,16 +175,18 @@
             </optgroup>
           </select>
           🗨:
-          <select name="commentStyleDropdown" size="1" onchange="module_main.default.updateCommentStyleFromDropdown()">
+          <select id="commentStyleDropdown" size="1" onchange="module_main.default.updateCommentStyleFromDropdown()">
             <option value="on">✔</option>
             <option value="hidden">✗</option>
           </select>
-          <div><a  name="speakerButton" class="btn btn-secondary" onclick="module_main.default.handleSpeakToggle()">🎧️</a></div>
+          <div><a id="expandAllButton" class="btn btn-secondary" onclick="module_main.default.query.setParamAndGo('expandAll', 'true')">↕️️</a></div>
+          <div><a id="printButton" class="btn btn-secondary" onclick="module_main.default.query.setParamAndGo('printLayout', 'on')">🖨️️</a></div>
+          <div><a id="speakerButton" class="btn btn-secondary" onclick="module_main.default.handleSpeakToggle()">🎧️</a></div>
         </div>
         <div class="row col  d-flex justify-content-center">
           <a href="/full_search"  class="btn btn-secondary">🥽🔦</a>
-          <div><a  name="previousPage" href="" class="btn btn-secondary">###<i class="fas fa-caret-left"></i></a></div>
-          <div ><a name="nextPage" href="" class="btn btn-secondary"><i class="fas fa-caret-right"></i> ### </a></div>
+          <div><a id="previousPage" href="" class="btn btn-secondary">###<i class="fas fa-caret-left"></i></a></div>
+          <div ><a id="nextPage" href="" class="btn btn-secondary"><i class="fas fa-caret-right"></i> ### </a></div>
         </div>
         <ul id="top-bar-right-custom" class="list-group list-group-horizontal">
         </ul>
@@ -195,7 +197,7 @@
     
     <div class="row" name="contentRow">
       
-      <aside class="col-md-3 card border " id="sidebar">
+      <aside class="col-md-3 card border noPrint " id="sidebar">
           <div id="fastSearch">
               <input id="searchInput" placeholder="शीर्षिकान्विष्यताम्"  tabindex="0">
           </div>
@@ -213,12 +215,12 @@
 <header class='border d-flex justify-content-between'>
     <h1 id="&#43;ಕುಮಾರ-ವ್ಯಾಸ-ಭಾರತ">&#43;ಕುಮಾರ-ವ್ಯಾಸ-ಭಾರತ</h1>
     
-    <a id="editLink" class="btn btn-primary"  href="https://github.com/vishvAsa/kannaDa/edit/content/padya/kumAra-vyAsa-bhArata/_index.md"><i class="fas fa-edit"></i></a>
+    <a id="editLink" class="btn btn-primary noPrint"  href="https://github.com/vishvAsa/kannaDa/edit/content/padya/kumAra-vyAsa-bhArata/_index.md"><i class="fas fa-edit"></i></a>
     
 </header>
 <main>
     <article>
-  <aside id="toc_card" class="card border ">
+  <aside id="toc_card" class="card border noPrint ">
     <div id="toc_header" class="card-title border d-flex justify-content-between">
         <a data-toggle="collapse" href="#toc_body" role="button" aria-expanded="true" aria-controls="toc_body">
           What's in this page? <i class="fas fa-caret-down"></i> </a>
@@ -253,7 +255,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/">&#43;ಕುಮಾರ-ವ್ಯಾಸ-ಭಾರತ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -279,7 +281,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/">&#43;೦೧ ಆದಿ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -302,7 +304,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/">&#43;೦೨ ಸಭಾ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -325,7 +327,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/">&#43;೦೩ ಅರಣ್ಯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -348,7 +350,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/">&#43;೦೪ ವಿರಾಟ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -371,7 +373,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/">&#43;೦೫ ಉದ್ಯೋಗ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -394,7 +396,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/">&#43;೦೬ ಭೀಷ್ಮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -417,7 +419,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/">&#43;೦೭ ದ್ರೋಣ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -440,7 +442,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/">&#43;೦೮ ಕರ್ಣ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -463,7 +465,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/">&#43;೦೯ ಶಲ್ಯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -486,7 +488,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/">&#43;೧೦ ಗದಾ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -517,7 +519,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/">&#43;೦೧ ಆದಿ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -543,7 +545,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -566,7 +568,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -589,7 +591,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -612,7 +614,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -635,7 +637,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -658,7 +660,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -681,7 +683,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -704,7 +706,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -727,7 +729,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -750,7 +752,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -773,7 +775,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -796,7 +798,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -819,7 +821,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -842,7 +844,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -865,7 +867,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -888,7 +890,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -911,7 +913,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -934,7 +936,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -957,7 +959,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -980,7 +982,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/01_Adi/20/">೨೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1017,7 +1019,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/">&#43;೦೨ ಸಭಾ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1043,7 +1045,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1066,7 +1068,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1089,7 +1091,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1112,7 +1114,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1135,7 +1137,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1158,7 +1160,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1181,7 +1183,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1204,7 +1206,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1227,7 +1229,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1250,7 +1252,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1273,7 +1275,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1296,7 +1298,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1319,7 +1321,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1342,7 +1344,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1365,7 +1367,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1388,7 +1390,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/02_sabhA/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1425,7 +1427,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/">&#43;೦೩ ಅರಣ್ಯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1451,7 +1453,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1474,7 +1476,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1497,7 +1499,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1520,7 +1522,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1543,7 +1545,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1566,7 +1568,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1589,7 +1591,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1612,7 +1614,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1635,7 +1637,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1658,7 +1660,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1681,7 +1683,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1704,7 +1706,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1727,7 +1729,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1750,7 +1752,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1773,7 +1775,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1796,7 +1798,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1819,7 +1821,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1842,7 +1844,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1865,7 +1867,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1888,7 +1890,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/20/">೨೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1911,7 +1913,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/21/">೨೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1934,7 +1936,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/22/">೨೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1957,7 +1959,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/03_araNya/23/">೨೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -1994,7 +1996,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/">&#43;೦೪ ವಿರಾಟ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2020,7 +2022,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2043,7 +2045,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2066,7 +2068,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2089,7 +2091,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2112,7 +2114,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2135,7 +2137,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2158,7 +2160,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2181,7 +2183,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2204,7 +2206,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2227,7 +2229,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2250,7 +2252,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2273,7 +2275,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2296,7 +2298,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/04_virATa/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2333,7 +2335,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/">&#43;೦೫ ಉದ್ಯೋಗ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2359,7 +2361,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2382,7 +2384,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2405,7 +2407,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2428,7 +2430,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2451,7 +2453,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2474,7 +2476,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2497,7 +2499,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2520,7 +2522,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2543,7 +2545,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2566,7 +2568,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2589,7 +2591,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/05_udyOga/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2626,7 +2628,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/">&#43;೦೬ ಭೀಷ್ಮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2652,7 +2654,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2675,7 +2677,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2698,7 +2700,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2721,7 +2723,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2744,7 +2746,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2767,7 +2769,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2790,7 +2792,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2813,7 +2815,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2836,7 +2838,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2859,7 +2861,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2882,7 +2884,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2905,7 +2907,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2928,7 +2930,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2951,7 +2953,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2974,7 +2976,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -2997,7 +2999,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3020,7 +3022,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3043,7 +3045,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3066,7 +3068,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3089,7 +3091,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/20/">೨೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3112,7 +3114,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/21/">೨೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3135,7 +3137,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/22/">೨೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3158,7 +3160,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/06_bhIShma/23/">೨೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3195,7 +3197,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/">&#43;೦೭ ದ್ರೋಣ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3221,7 +3223,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3244,7 +3246,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3267,7 +3269,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3290,7 +3292,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3313,7 +3315,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3336,7 +3338,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3359,7 +3361,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3382,7 +3384,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3405,7 +3407,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3428,7 +3430,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3451,7 +3453,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3474,7 +3476,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3497,7 +3499,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3520,7 +3522,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3543,7 +3545,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3566,7 +3568,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3589,7 +3591,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3612,7 +3614,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3635,7 +3637,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/07_drONa/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3672,7 +3674,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/">&#43;೦೮ ಕರ್ಣ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3698,7 +3700,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3721,7 +3723,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3744,7 +3746,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3767,7 +3769,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3790,7 +3792,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3813,7 +3815,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3836,7 +3838,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3859,7 +3861,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3882,7 +3884,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3905,7 +3907,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3928,7 +3930,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3951,7 +3953,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3974,7 +3976,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -3997,7 +3999,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4020,7 +4022,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4043,7 +4045,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4066,7 +4068,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4089,7 +4091,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4112,7 +4114,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4135,7 +4137,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/20/">೨೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4158,7 +4160,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/21/">೨೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4181,7 +4183,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/22/">೨೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4204,7 +4206,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/23/">೨೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4227,7 +4229,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/24/">೨೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4250,7 +4252,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/25/">೨೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4273,7 +4275,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/26/">೨೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4296,7 +4298,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/08_karNa/27/">೨೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4333,7 +4335,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/">&#43;೦೯ ಶಲ್ಯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4359,7 +4361,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4382,7 +4384,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4405,7 +4407,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4428,7 +4430,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4451,7 +4453,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4474,7 +4476,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4497,7 +4499,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4520,7 +4522,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4543,7 +4545,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4566,7 +4568,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4589,7 +4591,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4612,7 +4614,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4635,7 +4637,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4658,7 +4660,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/14/">೧೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4681,7 +4683,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/15/">೧೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4704,7 +4706,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/16/">೧೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4727,7 +4729,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/17/">೧೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4750,7 +4752,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/18/">೧೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4773,7 +4775,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/19/">೧೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4796,7 +4798,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/20/">೨೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4819,7 +4821,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/21/">೨೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4842,7 +4844,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/22/">೨೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4865,7 +4867,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/23/">೨೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4888,7 +4890,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/24/">೨೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4911,7 +4913,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/25/">೨೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4934,7 +4936,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/26/">೨೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4957,7 +4959,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/09_shalya/27/">೨೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -4994,7 +4996,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/">&#43;೧೦ ಗದಾ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5020,7 +5022,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/01/">೦೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5043,7 +5045,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/02/">೦೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5066,7 +5068,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/03/">೦೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5089,7 +5091,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/04/">೦೪ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5112,7 +5114,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/05/">೦೫ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5135,7 +5137,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/06/">೦೬ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5158,7 +5160,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/07/">೦೭ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5181,7 +5183,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/08/">೦೮ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5204,7 +5206,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/09/">೦೯ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5227,7 +5229,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/10/">೧೦ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5250,7 +5252,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/11/">೧೧ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5273,7 +5275,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/12/">೧೨ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5296,7 +5298,7 @@ Twice</p>
 
 
 
-<aside class="card border" id="section-tree-item-">
+<aside class="card border noPrint" id="section-tree-item-">
     <div class="card-title bg-light-gray border d-flex justify-content-between">
         <a href="https://vishvAsa.github.io/kannaDa/padya/kumAra-vyAsa-bhArata/10_gadA/13/">೧೩ </a>
         <a data-toggle="collapse" href="#section-tree-item-body-" role="button" aria-expanded="false" aria-controls="section-tree-item-body-" >…<i class="fas fa-caret-down" class="collapsed"></i> </a>
@@ -5342,7 +5344,7 @@ Twice</p>
     <a class="btn btn-secondary" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
     <div class="btn small border">
       
-      <a href="https://github.com/vishvAsa/kannaDa/actions/workflows/build.yml"><img src="https://github.com/vishvAsa/kannaDa/actions/workflows/build.yml/badge.svg"> Built </a> on 2022 Feb 4 08:46:22 UTC. (<a href="http://google.com/search?q=08%3a46%3a22%20UTC to IST">IST</a>)
+      <a href="https://github.com/vishvAsa/kannaDa/actions/workflows/build.yml"><img src="https://github.com/vishvAsa/kannaDa/actions/workflows/build.yml/badge.svg"> Built </a> on 2022 Feb 10 00:24:56 UTC. (<a href="http://google.com/search?q=00%3a24%3a56%20UTC to IST">IST</a>)
     </div>
   <ul id="footer-bar-right-custom" class="list-group list-group-horizontal">
   </ul>
