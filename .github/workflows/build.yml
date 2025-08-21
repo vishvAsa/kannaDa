@@ -2,9 +2,9 @@ name: Build Hugo site
 
 on:
   push:
-    branches: [ master, content ]
+    branches: [ '*' ]
   pull_request:
-    branches: [ master, content ]
+    branches: [ '*' ]
   workflow_dispatch:
     inputs:
       logLevel:
@@ -53,7 +53,7 @@ jobs:
     - name: Update submodules
       run: |
         set -o xtrace
-        git submodule update --init --recursive
+        git submodule update  --init --recursive
         git submodule update --remote --merge --recursive
     - name: Set content to pull request
       if: ${{ github.event_name == 'pull_request'}}
@@ -80,3 +80,15 @@ jobs:
         publish_dir: ./build_github
         publish_branch: gh-pages
         force_orphan: true # git history growth - even on non-src branches - makes cloning slow.
+    - name: Trigger indexing
+      if: ${{ steps.deploy.conclusion == 'success'}}
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          await github.rest.actions.createWorkflowDispatch({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            workflow_id: 'index_pages.yml',
+            ref: 'master',
+          })
