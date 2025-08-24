@@ -1,5 +1,5 @@
 .wercker
 /resources
 build_github
-build_*
+build_*/*
 *_local*
